@@ -14,7 +14,7 @@ import {
   Store,
 } from '@mui/icons-material';
 
-import { useGlobalContext } from 'content/DarkModeContext';
+import { useGlobalContext } from 'context/DarkModeContext';
 
 import './sidebar.scss';
 

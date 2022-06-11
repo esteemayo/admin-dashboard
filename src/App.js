@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import { productInputs, userInputs } from 'formData';
-import { useGlobalContext } from 'content/DarkModeContext';
+import { useGlobalContext } from 'context/DarkModeContext';
 import {
   Home,
   Layout,
