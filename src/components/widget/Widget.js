@@ -31,7 +31,7 @@ const Widget = ({ type }) => {
       data = {
         title: 'Orders',
         isMoney: false,
-        link: 'See all orders',
+        link: 'View all orders',
         icon: (
           <ShoppingCartOutlined
             className='icon'
@@ -47,7 +47,7 @@ const Widget = ({ type }) => {
       data = {
         title: 'Earnings',
         isMoney: true,
-        link: 'See all earnings',
+        link: 'View all earnings',
         icon: (
           <MonetizationOnOutlined
             className='icon'
