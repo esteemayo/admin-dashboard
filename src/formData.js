@@ -62,7 +62,7 @@ export const productInputs = [
     id: 'description',
     label: 'Description',
     type: 'text',
-    name: 'dedscription',
+    name: 'description',
     placeholder: 'Description',
   },
   {
