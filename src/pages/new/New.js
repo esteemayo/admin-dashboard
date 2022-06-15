@@ -49,7 +49,7 @@ const New = ({ inputs, title }) => {
                 const { id, name, type, label, placeholder } = item;
                 return (
                   <div className='form-input' key={id}>
-                    <label htmlFor={name}>{label}</label>
+                    <label htmlFor={id}>{label}</label>
                     <input type={type} id={name} placeholder={placeholder} />
                   </div>
                 );
