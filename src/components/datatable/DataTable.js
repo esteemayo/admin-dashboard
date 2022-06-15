@@ -6,7 +6,7 @@ import { userColumns, userRows } from 'data';
 
 import './datatable.scss';
 
-const DataTable = () => {
+const DataTable = ({ path }) => {
   const [data, setData] = useState(userRows);
 
   const handleDelete = (id) => {
@@ -25,7 +25,7 @@ const DataTable = () => {
       renderCell: (params) => {
         return (
           <div className='cell-action'>
-            <Link to={`/users/${params.row.id}`}>
+            <Link to={`/${path}/${params.row.id}`}>
               <button className='view-button'>View</button>
             </Link>
             <button
@@ -44,7 +44,7 @@ const DataTable = () => {
     <div className='datatable'>
       <div className='datatable-title'>
         Add new user
-        <Link to='/users/new' className='link'>
+        <Link to={`/${path}/new`} className='link'>
           Add new
         </Link>
       </div>
