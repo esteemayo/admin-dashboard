@@ -1,13 +1,21 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { DataGrid } from '@mui/x-data-grid';
 
-import { userColumns, userRows } from 'data';
+import { userColumns, userRows, productColumns, productRows } from 'data';
 
 import './datatable.scss';
 
 const DataTable = ({ path }) => {
-  const [data, setData] = useState(userRows);
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    if (path === 'users') {
+      setData(userRows);
+    } else {
+      setData(productRows);
+    }
+  }, [path]);
 
   const handleDelete = (id) => {
     if (window.confirm('Are you sure you want to delete this user')) {
@@ -43,14 +51,18 @@ const DataTable = ({ path }) => {
   return (
     <div className='datatable'>
       <div className='datatable-title'>
-        Add new user
+        {path === 'users' ? 'Add new user' : 'Add new product'}
         <Link to={`/${path}/new`} className='link'>
           Add new
         </Link>
       </div>
       <DataGrid
         rows={data}
-        columns={userColumns.concat(actionColumn)}
+        columns={
+          path === 'users'
+            ? userColumns.concat(actionColumn)
+            : productColumns.concat(actionColumn)
+        }
         pageSize={9}
         rowsPerPageOptions={[9]}
         checkboxSelection
