@@ -113,3 +113,81 @@ export const userRows = [
     age: 65,
   },
 ];
+
+export const productColumns = [
+  { field: 'id', headerName: 'ID', width: 250 },
+  { field: 'title', headerName: 'Title', width: 190 },
+  { field: 'description', headerName: 'Description', width: 250 },
+  {
+    field: 'img',
+    headerName: 'Image',
+    width: 70,
+    renderCell: (params) => {
+      return (
+        <div className='cell-with-img'>
+          <img
+            className='cell-img'
+            src={params.row.img}
+            alt={params.row.title}
+          />
+        </div>
+      );
+    },
+  },
+  { field: 'category', headerName: 'Category', width: 120 },
+  { field: 'price', headerName: 'Price', width: 90 },
+  { field: 'stock', headerName: 'Stock', width: 70 },
+];
+
+export const productRows = [
+  {
+    id: 1,
+    title: 'iPhone',
+    description:
+      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt officia illo illum facere architecto perspiciatis veritatis debitis voluptatum labore accusamus earum ipsa, velit, molestiae corporis aspernatur delectus quis deserunt impedit.',
+    img: 'https://images.pexels.com/photos/163143/sackcloth-sackcloth-textured-laptop-ipad-163143.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    category: 'gadget',
+    price: 200,
+    stock: true,
+  },
+  {
+    id: 2,
+    title: 'Sony',
+    description:
+      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt officia illo illum facere architecto perspiciatis veritatis debitis voluptatum labore accusamus earum ipsa, velit, molestiae corporis aspernatur delectus quis deserunt impedit.',
+    img: 'https://images.pexels.com/photos/163143/sackcloth-sackcloth-textured-laptop-ipad-163143.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    category: 'electronics',
+    price: 150,
+    stock: true,
+  },
+  {
+    id: 3,
+    title: 'Laptop',
+    description:
+      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt officia illo illum facere architecto perspiciatis veritatis debitis voluptatum labore accusamus earum ipsa, velit, molestiae corporis aspernatur delectus quis deserunt impedit.',
+    img: 'https://images.pexels.com/photos/163143/sackcloth-sackcloth-textured-laptop-ipad-163143.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    category: 'gadget',
+    price: 250,
+    stock: true,
+  },
+  {
+    id: 4,
+    title: 'Home Theatre',
+    description:
+      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt officia illo illum facere architecto perspiciatis veritatis debitis voluptatum labore accusamus earum ipsa, velit, molestiae corporis aspernatur delectus quis deserunt impedit.',
+    img: 'https://images.pexels.com/photos/163143/sackcloth-sackcloth-textured-laptop-ipad-163143.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    category: 'electronics',
+    price: 120,
+    stock: true,
+  },
+  {
+    id: 5,
+    title: 'iPad',
+    description:
+      'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt officia illo illum facere architecto perspiciatis veritatis debitis voluptatum labore accusamus earum ipsa, velit, molestiae corporis aspernatur delectus quis deserunt impedit.',
+    img: 'https://images.pexels.com/photos/163143/sackcloth-sackcloth-textured-laptop-ipad-163143.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    category: 'gadget',
+    price: 230,
+    stock: true,
+  },
+];
