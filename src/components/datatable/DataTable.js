@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { DataGrid } from '@mui/x-data-grid';
+import { Link, useLocation } from 'react-router-dom';
 
 import { userColumns, userRows, productColumns, productRows } from 'data';
 
