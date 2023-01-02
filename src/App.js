@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+import { userColumns } from 'data';
 import { productInputs, userInputs } from 'formData';
 import { useGlobalContext } from 'context/dark/DarkModeContext';
 import {
@@ -26,7 +27,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path='login' element={<Login />} />
             <Route path='users' element={<Layout />}>
-              <Route index element={<List />} />
+              <Route index element={<List columns={userColumns} />} />
               <Route path=':userId' element={<Single />} />
               <Route
                 path='new'
