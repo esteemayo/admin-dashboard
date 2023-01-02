@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { DataGrid } from '@mui/x-data-grid';
 import { Link, useLocation } from 'react-router-dom';
 
-import { userColumns, userRows, productColumns, productRows } from 'data';
+import { userRows, productRows } from 'data';
 
 import './datatable.scss';
 
