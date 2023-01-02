@@ -6,7 +6,10 @@ import { userColumns, userRows, productColumns, productRows } from 'data';
 
 import './datatable.scss';
 
-const DataTable = ({ path }) => {
+const DataTable = () => {
+  const { pathname } = useLocation();
+  const path = pathname.split('/')[1];
+
   const [data, setData] = useState([]);
 
   useEffect(() => {
