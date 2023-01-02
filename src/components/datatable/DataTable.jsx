@@ -9,7 +9,6 @@ import './datatable.scss';
 const DataTable = ({ columns }) => {
   const { pathname } = useLocation();
   const path = pathname.split('/')[1];
-
   const [data, setData] = useState([]);
 
   useEffect(() => {
