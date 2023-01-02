@@ -61,11 +61,7 @@ const DataTable = ({ columns }) => {
       </div>
       <DataGrid
         rows={data}
-        columns={
-          path === 'users'
-            ? userColumns.concat(actionColumn)
-            : productColumns.concat(actionColumn)
-        }
+        columns={columns.concat(actionColumn)}
         pageSize={9}
         rowsPerPageOptions={[9]}
         checkboxSelection
