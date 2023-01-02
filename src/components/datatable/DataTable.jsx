@@ -61,7 +61,7 @@ const DataTable = ({ columns }) => {
   return (
     <div className='datatable'>
       <div className='datatable-title'>
-        {path === 'users' ? 'Add new user' : 'Add new product'}
+        {path}
         <Link to={`/${path}/new`} className='link'>
           Add new
         </Link>
