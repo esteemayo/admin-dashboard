@@ -9,7 +9,7 @@ import {
   SearchOutlined,
 } from '@mui/icons-material';
 
-import { useGlobalContext } from 'context/DarkModeContext';
+import { useGlobalContext } from 'context/dark/DarkModeContext';
 
 import './navbar.scss';
 
