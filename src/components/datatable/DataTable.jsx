@@ -13,10 +13,17 @@ const DataTable = ({ columns }) => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    if (path === 'users') {
-      setData(userRows);
-    } else {
-      setData(productRows);
+    switch (path) {
+      case 'users':
+        setData(userRows);
+        break;
+
+      case 'products':
+        setData(productRows);
+        break;
+
+      default:
+        break;
     }
   }, [path]);
 
