@@ -1,4 +1,4 @@
-import { DARK, LIGHT, TOGGLE } from './DarkModeTypes';
+import { DARK, LIGHT, TOGGLE } from './dark/DarkModeTypes';
 
 const DarkModeReducer = (state, { type }) => {
   if (type === LIGHT) {
